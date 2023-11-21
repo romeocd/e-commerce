@@ -29,7 +29,7 @@ Product.init(
       },
       allowNull: false,
     },
-    
+
     stock: {
       type: DataTypes.INTEGER,
       allowNull: false,
@@ -38,6 +38,14 @@ Product.init(
         isNumeric: true
       }
     },
+    
+    category_id: {
+      type: DataTypes.INTEGER,
+      references:{
+        model: "category",
+        key: "id"
+      }
+    }
 
   },
   {
